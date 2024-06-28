@@ -35,7 +35,7 @@ variable "mysql-config" {
   description = "Operator configs for MySQL deployment"
   type        = map(string)
   default = {
-    "profile-limit-memory" = 2148
+    "profile-limit-memory" = 3456
   }
 }
 
