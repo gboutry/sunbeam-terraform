@@ -102,6 +102,7 @@ module "rabbitmq" {
   channel          = var.rabbitmq-channel
   revision         = var.rabbitmq-revision
   resource-configs = var.rabbitmq-config
+  logging-app      = local.grafana-agent-name
 }
 
 module "glance" {
