@@ -94,3 +94,48 @@ output "manila-data-database-offer-url" {
   description = "URL of the manila data database offer"
   value       = one(juju_offer.manila-data-database-offer[*].url)
 }
+
+output "ceph-application-name" {
+  description = "Name of the MicroCeph application"
+  value       = try(module.microceph-stack[0].ceph-application-name, null)
+}
+
+output "cinder-volume-ceph-application-name" {
+  description = "Name of the cinder-volume-ceph application"
+  value       = try(module.cinder-volume-stack[0].cinder-volume-ceph-application-name, null)
+}
+
+output "microovn-application-name" {
+  description = "Name of the MicroOVN application"
+  value       = try(module.microovn-stack[0].microovn-application-name, null)
+}
+
+output "ovsdb-cms-offer" {
+  description = "Offer URL for the MicroOVN ovsdb-cms endpoint"
+  value       = try(module.microovn-stack[0].ovsdb-cms-offer, null)
+}
+
+output "prometheus-metrics-offer-url" {
+  description = "URL of the prometheus metrics offer"
+  value       = try(module.observability-cos-stack[0].prometheus-metrics-offer-url, null)
+}
+
+output "prometheus-receive-remote-write-offer-url" {
+  description = "URL of the prometheus receive remote write offer"
+  value       = try(module.observability-cos-stack[0].prometheus-receive-remote-write-offer-url, null)
+}
+
+output "loki-logging-offer-url" {
+  description = "URL of the loki logging offer"
+  value       = try(module.observability-cos-stack[0].loki-logging-offer-url, null)
+}
+
+output "grafana-dashboard-offer-url" {
+  description = "URL of the grafana dashboard offer"
+  value       = try(module.observability-cos-stack[0].grafana-dashboard-offer-url, null)
+}
+
+output "alertmanager-karma-dashboard-offer-url" {
+  description = "URL of the alertmanager karma dashboard offer"
+  value       = try(module.observability-cos-stack[0].alertmanager-karma-dashboard-offer-url, null)
+}

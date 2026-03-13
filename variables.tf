@@ -1235,3 +1235,69 @@ variable "cloudkitty-config" {
   type        = map(string)
   default     = {}
 }
+
+variable "sunbeam_machine" {
+  description = "Configuration for the former sunbeam-machine plan."
+  type        = map(any)
+  default     = {}
+}
+
+variable "microovn" {
+  description = "Configuration for the former microovn plan."
+  type        = map(any)
+  default     = {}
+}
+
+variable "microceph" {
+  description = "Configuration for the former microceph plan."
+  type        = map(any)
+  default     = {}
+}
+
+variable "hypervisor" {
+  description = "Configuration for the former hypervisor plan."
+  type        = map(any)
+  default     = {}
+}
+
+variable "cinder_volume" {
+  description = "Configuration for the former cinder-volume plan."
+  type        = map(any)
+  default     = {}
+}
+
+variable "storage" {
+  description = "Configuration for the former storage plan."
+  type        = map(any)
+  default     = {}
+}
+
+variable "consul_client" {
+  description = "Configuration for the former consul-client plan."
+  type        = map(any)
+  default     = {}
+}
+
+variable "observability_cos" {
+  description = "Configuration for the former observability COS plan."
+  type        = map(any)
+  default     = {}
+}
+
+variable "observability_machine_agent" {
+  description = "Configuration for the former machine observability-agent plan."
+  type        = map(any)
+  default     = {}
+}
+
+variable "ubuntu_pro" {
+  description = "Configuration for the former Ubuntu Pro plan."
+  type        = map(any)
+  default     = {}
+}
+
+variable "manila_data" {
+  description = "Configuration for the former manila-data plan."
+  type        = map(any)
+  default     = {}
+}
